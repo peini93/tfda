@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<link href="css/reset.css" rel="stylesheet" media="screen"/>
+	<link rel="stylesheet" href="css/jpreloader.css">
+	<link href="css/style.css" rel="stylesheet" media="screen"/>
+	<title>粧點魔法王國-化粧品安全選用 網路有獎徵答活動</title>
+</head>
+<body>
+	<!--得獎名單popup start-->
+	<div id="awardpopwrap">
+		<div class="bbg"></div>
+		<div class="popup radius50">
+			<img src="images/awardpop.png" alt="" class="pop"/>
+			<div class="fbfans">
+				<a href="https://www.facebook.com/tfdacos/" target="_blank"><img src="images/fansphoto.jpg" alt="" /></a>
+				<div class="fbright">
+				<a href="https://www.facebook.com/tfdacos/" target="_blank" class="fbname">TFDA化粧品安全使用</a>
+				<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Ftfdacos%2F&width=92&layout=button_count&action=like&size=large&show_faces=false&share=false&height=21&appId=371676216271457" width="92" height="30" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				</div>
+			</div>
+			
+			<a href="javascript: void(0)"  class="close" onclick="awardpopout()"></a>
+		</div>
+	</div>
+	<!--得獎名單popup end-->
+
+	<!--q1答對popup start-->
+	<div id="rightpopwrap" class="gameBpopup">
+		<div class="bbg"></div>
+		<div class="q1rightpopup radius50">
+			<img src="images/gameb/q1rightpopup.png" alt="" />
+			<a href="javascript: void(0)" class="button" onclick="gameBq1toq2();"></a>	
+		</div>
+		<div class="q2rightpopup radius50">
+			<img src="images/gameb/q2rightpopup.png" alt="" />
+			<a href="gameB-2.html" class="button golink"></a>		
+		</div>
+	</div>
+	<!--q1答對popup end-->
+	<div id="wrap" class="gameBbg">
+		<div class="container">
+			<a href="" class="logo"><img src="images/logo.png" alt="" /></a>
+			<div class="nav">
+				<ul>
+					<li><a href="javascript: void(0)" class="m1 act"></a></li>
+					<li><a href="rule.html" class="m2"></a></li>
+					<li><a href="javascript: void(0)" class="m3"></a></li>
+					<li><a href="javascript: void(0)" class="m4" onclick="awardpop()"></a></li>
+					<li><a href="https://www.facebook.com/tfdacos/" target="_blank" class="m5"></a></li>
+				</ul>
+			</div>	
+			<div class="gameB">
+
+				<div class="gameB-start">
+					<a href="javascript: void(0)">
+						<img src="images/gameb/star-btn.png" alt="開始按鈕" class="g2-start-btn" onclick="gamebstart()" />
+					</a>
+				</div>
+
+				<div class="gameB-girl"></div>
+				<img src="images/gameb/shopping.png" alt="購物車" class="shopping"/>
+				<img src="images/gameb/chart.png" alt="對話框" class="chart"/>
+
+				<div class="gamebq">
+					<div class="btnbox">
+						<a href="javascript: void(0)" class="">製造業者名稱地址及電話</a>
+						<a href="javascript: void(0)" class="">品名</a>
+						<a href="javascript: void(0)" class="">使用注意事項</a>
+						<a href="javascript: void(0)" class="">保存方法</a>
+						<a href="javascript: void(0)" class="atc">製造日期及保存期限</a>
+						<a href="javascript: void(0)" class="notshow">全成分</a>
+						<a href="javascript: void(0)" class="notshow">用途</a>
+						<a href="javascript: void(0)" class="notshow">批號</a>
+						<a href="javascript: void(0)" class="notshow">用法</a>
+					</div>
+					<div class="girl-head"></div>
+				</div>
+
+				<div class="bottle">
+					<a href="javascript: void(0)" class="gameans1" onclick="gamewrongB()"></a>
+					<a href="javascript: void(0)" class="gameans2" onclick="gamewrongB()"></a>
+					<a href="javascript: void(0)" class="gameans3" onclick="gamewrongB()"></a>
+					<a href="javascript: void(0)" class="gameans4" onclick="gamewrongB()"></a>
+					<a href="javascript: void(0)" class="gameans5" onclick="gamewrongB()"></a>
+					<a href="javascript: void(0)" class="gameans6" onclick="gamewrongB()"></a>
+					<a href="javascript: void(0)" class="gameans7" onclick="gamewrongB()"></a>
+					<a href="javascript: void(0)" class="gameans8" onclick="gamecorrentB(this)"></a>
+					<a href="javascript: void(0)" class="gameans9" onclick="gamewrongB()"></a>
+				</div>
+
+				<!--答錯msg-->
+				<img src="images/gameb/wrong.png" alt="答錯提示" class="wrong" />
+
+				<!--答對msg-->
+				<img src="images/gameb/corrent.png" alt="答對提示" class="corrent" />
+				<!--全答對-->
+				<div class="allcorrent">
+					<a href="form.html" class="goawardbtn">
+						<img src="images/gameb/lottery-btn.png" alt="抽獎"/>
+					</a>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/jpreloader.min.js"></script>
+	<script src="js/jquery.animateSprite.js"></script>
+	<script type="text/javascript" src="js/eventact.js"></script>
+</html>
