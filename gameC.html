@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<link href="css/reset.css" rel="stylesheet" media="screen"/>
+	<link rel="stylesheet" href="css/jpreloader.css">
+	<link href="css/style.css" rel="stylesheet" media="screen"/>
+	<title>粧點魔法王國-化粧品安全選用 網路有獎徵答活動</title>  
+</head>
+<body>
+	<!--得獎名單popup start-->
+	<div id="awardpopwrap">
+		<div class="bbg"></div>
+		<div class="popup radius50">
+			<img src="images/awardpop.png" alt="" class="pop"/>
+			<div class="fbfans">
+				<a href="https://www.facebook.com/tfdacos/" target="_blank"><img src="images/fansphoto.jpg" alt="" /></a>
+				<div class="fbright">
+				<a href="https://www.facebook.com/tfdacos/" target="_blank" class="fbname">TFDA化粧品安全使用</a>
+				<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Ftfdacos%2F&width=92&layout=button_count&action=like&size=large&show_faces=false&share=false&height=21&appId=371676216271457" width="92" height="30" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				</div>
+			</div>
+			
+			<a href="javascript: void(0)"  class="close" onclick="awardpopout()"></a>
+		</div>
+	</div>
+	<!--得獎名單popup end-->
+
+	<div id="wrap" class="gameCbg">
+		<div class="container">
+			<a href="" class="logo"><img src="images/logo.png" alt="" /></a>
+			<div class="nav">
+				<ul>
+					<li><a href="javascript: void(0)" class="m1 act"></a></li>
+					<li><a href="rule.html" class="m2"></a></li>
+					<li><a href="javascript: void(0)" class="m3"></a></li>
+					<li><a href="javascript: void(0)" class="m4" onclick="awardpop()"></a></li>
+					<li><a href="https://www.facebook.com/tfdacos/" target="_blank" class="m5"></a></li>
+				</ul>
+			</div>	
+			<div class="gameC">
+				
+
+				<img src="images/gamec/table.png" alt="桌子" class="table">
+				<img src="images/gamec/startcat.gif" alt="貓" class="gameccat">
+				<div class="gamec-start">
+					<a href="javascript: void(0)" class="g3-start-btn" onclick="gamestart()">
+						<img src="images/gamec/star-btn.png" alt="開始按鈕" />
+					</a>
+				</div>
+
+				<div id="draggable01" class="p1">
+					<img src="images/gamec/p1.png" alt="保濕乳液">
+				</div>
+				<div id="draggable02" class="p2">
+					<img src="images/gamec/p2.png" alt="除毛膏">
+				</div>
+				<div id="draggable03" class="p3">
+					<img src="images/gamec/p3.png" alt="燙髮劑">
+				</div>
+				<div id="draggable04" class="p4">
+					<img src="images/gamec/p4.png" alt="潤髮劑">
+				</div>
+				<div id="draggable05" class="p5">
+					<img src="images/gamec/p5.png" alt="防蚊液">
+				</div>
+				<div id="draggable06" class="p6">
+					<img src="images/gamec/p6.png" alt="蜜粉">
+				</div>
+				<div id="draggable07" class="p7">
+					<img src="images/gamec/p7.png" alt="髮膠">
+				</div>
+				<div id="draggable08" class="p8">
+					<img src="images/gamec/p8.png" alt="沐浴乳">
+				</div>
+				<div id="draggable09" class="p9">
+					<img src="images/gamec/p9.png" alt="剃鬍劑">
+				</div>
+				<div id="draggable10" class="p10">
+					<img src="images/gamec/p10.png" alt="乾洗手">
+				</div>
+				<div id="draggable11" class="p11">
+					<img src="images/gamec/p11.png" alt="指甲油">
+				</div>
+				<div id="draggable12" class="p12">
+					<img src="images/gamec/p12.png" alt="減重膠囊">
+				</div>
+				<div id="draggable13" class="p13">
+					<img src="images/gamec/p13.png" alt="防曬劑">
+				</div>
+				<div id="draggable14" class="p14">
+					<img src="images/gamec/p14.png" alt="護手霜">
+				</div>
+				<div id="draggable15" class="p15">
+					<img src="images/gamec/p15.png" alt="香水">
+				</div>
+				<div id="draggable16" class="p16">
+					<img src="images/gamec/p16.png" alt="一般牙膏">
+				</div>
+				<div id="draggable17" class="p17">
+					<img src="images/gamec/p17.png" alt="護唇膏">
+				</div>
+				<div id="draggable18" class="p18">
+					<img src="images/gamec/p18.png" alt="面膜">
+				</div>
+				<div id="draggable19" class="p19">
+					<img src="images/gamec/p19.png" alt="小針美容">
+				</div>
+				<div id="draggable20" class="p20">
+					<img src="images/gamec/p20.png" alt="眼影">
+				</div>
+
+				<div id="Box1" class="car-cosmetic"></div>
+				<div id="Box2" class="car-notcosmetic"></div>
+					<!--答錯-->
+					<img src="images/gamec/mistake.png" alt="答錯" class="wrong">
+					<!--答錯end-->
+					<!--全部答對-->
+					<div class="allright">
+						<a href="gameD.html" class="goform">
+							<img src="images/gamec/next-btn.png" alt="到下一關" />
+						</a>
+					</div>
+					<!--全部答對end-->
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/jpreloader.min.js"></script>
+	<script src="js/jquery.animateSprite.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/eventact.js"></script>
+	<script>
+
+		// function AllowDrop(event){
+		// 	event.preventDefault();
+		// }
+		// function Drag(event){
+		// 	event.dataTransfer.setData("text",event.currentTarget.id);
+		// }
+		// function Drop(event){
+		// 	event.preventDefault();
+		// 	var data=event.dataTransfer.getData("text");
+		// 	event.currentTarget.appendChild(document.getElementById(data));
+		// }
+
+		$(function() {	
+		  $( "#draggable01" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable02" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable03" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable04" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable05" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable06" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable07" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable08" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable09" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable10" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable11" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable12" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable13" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable14" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable15" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable16" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable17" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable18" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable19" ).draggable(
+			{ revert: "invalid" }
+		  );
+		  $( "#draggable20" ).draggable(
+			{ revert: "invalid" }
+		  );
+
+		  $( "#Box1" ).droppable({
+			drop: function( event, ui ) {
+				gamecwrong();
+			}
+		  });
+		  $( "#Box2" ).droppable({
+			drop: function( event, ui ) {
+				gamecallright();
+			}
+		  });
+
+		});
+	</script>
+</html>

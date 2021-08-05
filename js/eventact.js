@@ -189,404 +189,45 @@ function allright(){
 /*第三關*/
 
 function gameCanimate(){
-  TweenMax.to($('.gameC .bigtitle'), 0.6, {autoAlpha:1,ease:Quad.easeOut});
-  TweenMax.to($('.gameC .bigtitle'), 0.6, {autoAlpha:0,delay:3,ease:Quad.easeOut});
-  TweenMax.to($('.catteacher'), 0.6, {marginLeft:-50,autoAlpha:0,delay:3,ease:Quad.easeOut});
-  TweenMax.to($('.gameC .qlist,.gameC .alist'), 0.6, {autoAlpha:1,delay:3,ease:Quad.easeOut});
-  TweenMax.to($('#count'), 0.6, {autoAlpha:0.2,delay:3,ease:Quad.easeOut,onComplete:timestart});
-
-}
-function timestart(){
-    timer = window.setInterval("timego()",1000);
-}
-
-function timego(){
-  count--;
-  document.getElementById("count").innerHTML = count;
-   if (count==0){
-    window.clearInterval(timer);
-    TweenMax.to($('#count'), 0.3, {autoAlpha:0,ease:Quad.easeOut,onComplete:timestart});
-    gamecstart();
-
-  }
-}
-function gamecstart(){
-  pairnum=0;
-  pairnum2=0;
-  $('.gameC .alist li.ori img').css("display","none");
-  $('.gameC .alist li.ori').removeClass("acted");
-  $('.gameC .qlist li.ori').removeClass("acted");
-  alistopen();
-  qlistopen();
-
+  TweenMax.to($('.table'), 0.3, {autoAlpha:1,ease:Quad.easeOut});
+  TweenMax.to($('.gameccat'), 0.3, {left:200,autoAlpha:1,delay:1,ease:Quad.easeOut});
+  TweenMax.to($('.gamec-start'), 0.3, {right:60,autoAlpha:1,delay:2,ease:Quad.easeOut});
+  TweenMax.to($('.car-cosmetic'), 0.3, {left:200,autoAlpha:1,delay:2.5,ease:Quad.easeOut});
+  TweenMax.to($('.car-notcosmetic'), 0.3, {right:200,autoAlpha:1,delay:2.5,ease:Quad.easeOut});
 
 }
 
-function alistopen(){
-
-  $('.alist li.ori').click(function(){
-    $(".alist li.ori").children('img').css( "display", "none" );
-    $(this).children('img').css( "display", "block" );
-    $(".alist li.ori").removeClass("acted");
-    $(this).addClass("acted");
-    pairnum=1;
-    console.log(pairnum);
-     pairresult();
-  });
+function gamestart(){
+  TweenMax.to($('.gameccat'), 0.3, {left:-100,autoAlpha:0,delay:0.5,ease:Quad.easeOut});
+  TweenMax.to($('.gamec-start'), 0.3, {right:-100,autoAlpha:0,delay:0.5,ease:Quad.easeOut});
+  $(".p1,.p2,.p3,.p4,.p5,.p6,.p7,.p8,.p9,.p10").delay(500).fadeIn();
 }
-function qlistopen(){
-   console.log(pairnum2);
-  $('.qlist li.ori').click(function(){
-    $(".qlist li.ori").removeClass("acted");
-    $(this).addClass("acted");
-    pairnum2=1;
-     console.log(pairnum2);
-      pairresult();
-  });
-}
-
-
-
-
-function pairresult(){
-  var $paira1 = $(".alist li.a1");
-  var $pairq1 = $(".qlist li.q1");
-  var $paira2 = $(".alist li.a2");
-  var $pairq2 = $(".qlist li.q2");
-  var $paira3 = $(".alist li.a3");
-  var $pairq3 = $(".qlist li.q3");
-  var $paira4 = $(".alist li.a4");
-  var $pairq4 = $(".qlist li.q4");
-  var $paira5 = $(".alist li.a5");
-  var $pairq5 = $(".qlist li.q5");
-  var $paira6 = $(".alist li.a6");
-  var $pairq6 = $(".qlist li.q6");
-  var $paira7 = $(".alist li.a7");
-  var $pairq7 = $(".qlist li.q7");
-  var $paira8 = $(".alist li.a8");
-  var $pairq8 = $(".qlist li.q8");
-  var $paira9 = $(".alist li.a9");
-  var $pairq9 = $(".qlist li.q9");
-  console.log('in');
-  if (pairnum==1 && pairnum2==1) {
-    $('.alist li.ori').unbind( "click" );
-    $('.qlist li.ori').unbind( "click" );
-
-    if ($paira1.hasClass("acted") && $pairq1.hasClass("acted") && !$paira1.hasClass("ok") ) {
-      TweenMax.to($('.alist li.a1 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      TweenMax.to($('.qlist li.q1 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      $paira1.removeClass("ori");
-      $paira1.addClass("ok");
-      $pairq1.removeClass("ori");
-      $pairq1.addClass("ok");
-      gamecstart();
-      pairoknum++
-      checkallright();
-    }else if($paira2.hasClass("acted") && $pairq2.hasClass("acted") && !$paira2.hasClass("ok")){
-      TweenMax.to($('.alist li.a2 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      TweenMax.to($('.qlist li.q2 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      $paira2.removeClass("ori");
-      $paira2.addClass("ok");
-      $pairq2.removeClass("ori");
-      $pairq2.addClass("ok");
-      gamecstart();
-      pairoknum++
-      checkallright();
-    }else if($paira3.hasClass("acted") && $pairq3.hasClass("acted") && !$paira3.hasClass("ok")){
-      TweenMax.to($('.alist li.a3 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      TweenMax.to($('.qlist li.q3 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      $paira3.removeClass("ori");
-      $paira3.addClass("ok");
-      $pairq3.removeClass("ori");
-      $pairq3.addClass("ok");
-      gamecstart();
-      pairoknum++
-      checkallright();
-    }else if($paira4.hasClass("acted") && $pairq4.hasClass("acted") && !$paira4.hasClass("ok")){
-      TweenMax.to($('.alist li.a4 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      TweenMax.to($('.qlist li.q4 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      $paira4.removeClass("ori");
-      $paira4.addClass("ok");
-      $pairq4.removeClass("ori");
-      $pairq4.addClass("ok");
-      gamecstart();
-      pairoknum++
-      checkallright();
-    }else if($paira5.hasClass("acted") && $pairq5.hasClass("acted") && !$paira5.hasClass("ok")){
-      TweenMax.to($('.alist li.a5 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      TweenMax.to($('.qlist li.q5 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      $paira5.removeClass("ori");
-      $paira5.addClass("ok");
-      $pairq5.removeClass("ori");
-      $pairq5.addClass("ok");
-      gamecstart();
-      pairoknum++
-      checkallright();
-    }else if($paira6.hasClass("acted") && $pairq6.hasClass("acted") && !$paira6.hasClass("ok")){
-      TweenMax.to($('.alist li.a6 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      TweenMax.to($('.qlist li.q6 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      $paira6.removeClass("ori");
-      $paira6.addClass("ok");
-      $pairq6.removeClass("ori");
-      $pairq6.addClass("ok");
-      gamecstart();
-      pairoknum++
-      checkallright();
-    }else if($paira7.hasClass("acted") && $pairq7.hasClass("acted") && !$paira7.hasClass("ok")){
-      TweenMax.to($('.alist li.a7 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      TweenMax.to($('.qlist li.q7 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      $paira7.removeClass("ori");
-      $paira7.addClass("ok");
-      $pairq7.removeClass("ori");
-      $pairq7.addClass("ok");
-      gamecstart();
-      pairoknum++
-      checkallright();
-    }else if($paira8.hasClass("acted") && $pairq8.hasClass("acted") && !$paira8.hasClass("ok")){
-      TweenMax.to($('.alist li.a8 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      TweenMax.to($('.qlist li.q8 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      $paira8.removeClass("ori");
-      $paira8.addClass("ok");
-      $pairq8.removeClass("ori");
-      $pairq8.addClass("ok");
-      gamecstart();
-      pairoknum++
-      checkallright();
-    }else if($paira9.hasClass("acted") && $pairq9.hasClass("acted") && !$paira9.hasClass("ok")){
-      TweenMax.to($('.alist li.a9 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      TweenMax.to($('.qlist li.q9 .rcircle'), 0.1, {autoAlpha:1,ease:Quad.easeOut});
-      $paira9.removeClass("ori");
-      $paira9.addClass("ok");
-      $pairq9.removeClass("ori");
-      $pairq9.addClass("ok");
-      gamecstart();
-      pairoknum++
-      checkallright();
-    }else{
-      gamecwrong();
-    }
-
-  }
-}
-function checkallright(){
-  if(pairoknum==6){
-    gamecallright();
-  }
-}
-
-
 
 function gamecwrong(){
   TweenMax.to($('.gameC .wrong'), 0.6, {marginTop:0,autoAlpha:1,ease:Quad.easeOut});
-  TweenMax.to($('.gameC .wrong'), 0.6, {marginTop:50,autoAlpha:0,delay:2,ease:Quad.easeOut,onComplete:gamecstart});
+  TweenMax.to($('.gameC .wrong'), 0.6, {marginTop:50,autoAlpha:0,delay:2,ease:Quad.easeOut});
 }
+
 function gamecallright(){
    TweenMax.to($('.gameC .allright'), 0.6, {autoAlpha:1,marginTop:0,ease:Quad.easeOut});
-
 }
+
+/*第四關*/
 
 function gameDanimate(){
   TweenMax.to($('.gameD .qtitle'), 0.6, {autoAlpha:1,ease:Quad.easeOut});
   TweenMax.to($('.gameD .qtitle'), 0.6, {autoAlpha:0,delay:3,ease:Quad.easeOut});
   TweenMax.to($('.gameD .itemwrap'), 0.6, {autoAlpha:1,delay:3,ease:Quad.easeOut});
-
   gamedq1();
 }
+
 function gamedwrong(){
   TweenMax.to($('.gameD .wrong'), 0.6, {marginTop:0,autoAlpha:1,ease:Quad.easeOut});
   TweenMax.to($('.gameD .wrong'), 0.6, {marginTop:50,autoAlpha:0,delay:2,ease:Quad.easeOut});
 }
-function gamedq1(){
-  TweenMax.to($('.itemwrap a'), 0.4, {scale:0.9,repeat:-1, yoyo:true,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .t1'), 0.6, {autoAlpha:1,marginTop:0,delay:3.5,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q1'), 0.6, {autoAlpha:1,marginLeft:0,delay:3,ease:Quad.easeOut});
-  dnum=1;
-  console.log(dnum);
 
-}
-function item1(){
-  switch(dnum) {
-      case 1:
-        gamedwrong();
-        break;
-      case 2:
-        gamedwrong();
-        break;
-      case 3:
-        gamedwrong();
-        break;
-      case 4:
-        gamedwrong();
-        break;
-      case 5:
-        gamedwrong();
-        break;
-      case 6:
-        gamedq7();
-        break;
-      case 7:
-        gamedwrong();
-        break;
-      case 8:
-        gamedwrong();
-        break;
-      case 9:
-        gamedwrong();
-        break;
 
-  }
-}
-function item2(){
-  switch(dnum) {
-      case 1:
-        gamedwrong();
-        break;
-      case 2:
-        gamedwrong();
-        break;
-      case 3:
-        gamedwrong();
-        break;
-      case 4:
-        gamedwrong();
-        break;
-      case 5:
-        gamedwrong();
-        break;
-      case 6:
-        gamedwrong();
-        break;
-      case 7:
-        gamedwrong();
-        break;
-      case 8:
-        gamedwrong();
-        break;
-      case 9:
-        gamedwrong();
-        break;
 
-  }
-}
-function item3(){
-  switch(dnum) {
-      case 1:
-        gamedwrong();
-        break;
-      case 2:
-        gamedwrong();
-        break;
-      case 3:
-        gamedwrong();
-        break;
-      case 4:
-        gamedwrong();
-        break;
-      case 5:
-        gamedwrong();
-        break;
-      case 6:
-        gamedwrong();
-        break;
-      case 7:
-        gamedq8();
-        break;
-      case 8:
-        gamedwrong();
-        break;
-      case 9:
-        gamedwrong();
-        break;
-  }
-}
-function item4(){
-  switch(dnum) {
-      case 1:
-        gamedwrong();
-        break;
-      case 2:
-        gamedwrong();
-        break;
-      case 3:
-        gamedwrong();
-        break;
-      case 4:
-        gamedwrong();
-        break;
-      case 5:
-        gamedwrong();
-        break;
-      case 6:
-        gamedwrong();
-        break;
-      case 7:
-        gamedwrong();
-        break;
-      case 8:
-        gamedwrong();
-        break;
-  }
-}
-function item5(){
-  switch(dnum) {
-      case 1:
-        gamedq2();
-        break;
-      case 2:
-        gamedq3();
-        break;
-      case 3:
-        gamedq4();
-        break;
-      case 4:
-        gamedq5();
-        break;
-      case 5:
-        gamedwrong();
-        break;
-      case 6:
-        gamedwrong();
-        break;
-      case 7:
-        gamedwrong();
-        break;
-      case 8:
-        gamedq9();
-        break;
-      case 9:
-        gamedallright();
-        break;
-
-  }
-}
-function item6(){
-  switch(dnum) {
-      case 1:
-        gamedwrong();
-        break;
-      case 2:
-        gamedwrong();
-        break;
-      case 3:
-        gamedwrong();
-        break;
-      case 4:
-        gamedwrong();
-        break;
-      case 5:
-        gamedq6();
-        break;
-      case 6:
-        gamedwrong();
-        break;
-      case 7:
-        gamedwrong();
-        break;
-      case 8:
-        gamedwrong();
-        break;
-  }
-}
 function gamedq2(){
   TweenMax.to($('.gameD .t1'), 0.6, {autoAlpha:0,marginTop:-30,ease:Quad.easeOut});
   TweenMax.to($('.gameD .q1'), 0.6, {autoAlpha:0,marginLeft:-30,ease:Quad.easeOut});
