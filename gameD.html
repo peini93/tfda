@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<link href="css/reset.css" rel="stylesheet" media="screen"/>
+	<link rel="stylesheet" href="css/jpreloader.css">
+	<link href="css/style.css" rel="stylesheet" media="screen"/>
+	<title>粧點魔法王國-化粧品安全選用 網路有獎徵答活動</title>
+</head>
+<body>
+	<!--得獎名單popup start-->
+	<div id="awardpopwrap">
+		<div class="bbg"></div>
+		<div class="popup radius50">
+			<img src="images/awardpop.png" alt="" class="pop"/>
+			<div class="fbfans">
+				<a href="https://www.facebook.com/tfdacos/" target="_blank"><img src="images/fansphoto.jpg" alt="" /></a>
+				<div class="fbright">
+				<a href="https://www.facebook.com/tfdacos/" target="_blank" class="fbname">TFDA化粧品安全使用</a>
+				<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Ftfdacos%2F&width=92&layout=button_count&action=like&size=large&show_faces=false&share=false&height=21&appId=371676216271457" width="92" height="30" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				</div>
+			</div>
+			
+			<a href="javascript: void(0)"  class="close" onclick="awardpopout()"></a>
+		</div>
+	</div>
+	<!--得獎名單popup end-->
+
+	<div id="wrap" class="gameDbg">
+		<div class="container">
+			<a href="" class="logo"><img src="images/logo.png" alt="" /></a>
+			<div class="nav">
+				<ul>
+					<li><a href="javascript: void(0)" class="m1 act"></a></li>
+					<li><a href="rule.html" class="m2"></a></li>
+					<li><a href="javascript: void(0)" class="m3"></a></li>
+					<li><a href="javascript: void(0)" class="m4" onclick="awardpop()"></a></li>
+					<li><a href="https://www.facebook.com/tfdacos/" target="_blank" class="m5"></a></li>
+				</ul>
+			</div>	
+			<div class="gameD">
+				<div class="gamedcat"></div>
+				<div class="gamedstart">
+					<a href="javascript: void(0)" onclick="gamedstart()" class="g4-start-btn" >
+						<img src="images/gamed/star-btn.png" alt="開始按鈕" />
+					</a>
+				</div>
+
+				<div class="g4q1"></div>
+				<div class="g4q1-1"></div>
+				<div id="gamedq1" class="qbg">
+					<div class="tag">
+						<p>Q1</p>
+						<p>Q1</p>
+					</div>
+					<h1>請問如果青春痘嚴重該怎麼辦？</h1>
+					<a href="javascript:void(0)" class="ans-a" onclick="gamedwrong()">
+						<p>頻繁的洗臉，保持臉部乾燥</p>
+					</a>
+					<a href="javascript:void(0)" class="ans-b" onclick="gamedq1ok()">
+						<p>一天洗臉不宜超過2次，並盡快找皮膚科醫師治療</p>
+					</a>
+					<a href="javascript:void(0)" class="ans-c" onclick="gamedwrong()">
+						<p>用化粧品遮蓋</p>
+					</a>
+				</div>
+
+				<div class="g4q2"></div>
+				<div class="g4q2-1"></div>
+
+				<div id="gamedq2" class="qbg">
+					<div class="tag">
+						<p>Q2</p>
+						<p>Q2</p>
+					</div>
+					<h1>請問，想要美白，要做的第一件事情是？</h1>
+					<a href="javascript:void(0)" class="ans-a" onclick="gamedwrong()">
+						<p>用牛奶泡澡</p>
+					</a>
+					<a href="javascript:void(0)" class="ans-b" onclick="gamedq2ok()">
+						<p>防曬</p>
+					</a>
+					<a href="javascript:void(0)" class="ans-c" onclick="gamedwrong()">
+						<p>用蘆薈敷臉</p>
+					</a>
+				</div>
+
+				<div class="g4q3"></div>
+				<div class="g4q3-1"></div>
+
+				<div id="gamedq3" class="qbg">
+					<div class="tag">
+						<p>Q3</p>
+						<p>Q3</p>
+					</div>
+					<h1>最近吹冷氣吹到皮膚有點乾燥，怎麼辦呢？</h1>
+					<a href="javascript:void(0)" class="ans-a" onclick="gamedq3ok()">
+						<p>適度塗抹乳液</p>
+					</a>
+					<a href="javascript:void(0)" class="ans-b" onclick="gamedwrong()">
+						<p>晚上敷面膜敷到隔天睡醒</p>
+					</a>
+					<a href="javascript:void(0)" class="ans-c" onclick="gamedwrong()">
+						<p>一直泡澡</p>
+					</a>
+				</div>
+
+				<div class="g4q4"></div>
+				<div class="g4q4-1"></div>
+
+				<div id="gamedq4" class="qbg">
+					<div class="tag">
+						<p>Q4</p>
+						<p>Q4</p>
+					</div>
+					<h1>夏天容易流汗，身體有異味！該怎麼辦？</h1>
+					<a href="javascript:void(0)" class="ans-a" onclick="gamedwrong()">
+						<p>狂噴香水掩蓋</p>
+					</a>
+					<a href="javascript:void(0)" class="ans-b" onclick="gamedwrong()">
+						<p>不停補擦止汗制臭劑</p>
+					</a>
+					<a href="javascript:void(0)" class="ans-c" onclick="gamedallright()">
+						<p>適度使用止汗制臭劑，並找皮膚科醫師治療</p>
+					</a>
+				</div>
+						
+				
+				<!--答錯-->
+				<img src="images/gamed/mistake.png" alt="答錯" class="wrong">
+				<!--答錯end-->
+				<!--全部答對-->
+				<div class="gamedallright">
+					<a href="form.html" class="g4-goform">
+					 <img src="images/gamed/right-btn.png" alt="到填寫表格">
+					</a>
+				</div>
+				<!--全部答對end-->
+			</div>
+		</div>
+	</div>
+</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/jpreloader.min.js"></script>
+	<script src="js/jquery.animateSprite.js"></script>
+	<script type="text/javascript" src="js/eventact.js"></script>
+</html>

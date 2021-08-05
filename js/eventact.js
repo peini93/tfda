@@ -50,6 +50,14 @@ $(document).ready(function() {
       loop:true 
     });
 
+    var mc3=$('.gamedcat,.g4q1,.g4q2,.g4q3,.g4q4,.g4q1-1,.g4q2-1,.g4q3-1,.g4q4-1');
+    mc3.animateSprite({
+      columns: 3,
+      totalFrames: 3,
+      duration: 500,
+      loop:true 
+    });
+
   });
 
 
@@ -215,11 +223,51 @@ function gamecallright(){
 /*第四關*/
 
 function gameDanimate(){
-  TweenMax.to($('.gameD .qtitle'), 0.6, {autoAlpha:1,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .qtitle'), 0.6, {autoAlpha:0,delay:3,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .itemwrap'), 0.6, {autoAlpha:1,delay:3,ease:Quad.easeOut});
-  gamedq1();
+  TweenMax.to($('.gamedcat'), 0.3, {left:100,autoAlpha:1,delay:0.5,ease:Quad.easeOut});
+  TweenMax.to($('.gamedstart'), 0.3, {right:0,autoAlpha:1,delay:0.8,ease:Quad.easeOut});
 }
+
+function gamedstart(){
+  TweenMax.to($('.gamedcat'), 0.3, {left:-100,autoAlpha:0,delay:0.5,ease:Quad.easeOut});
+  TweenMax.to($('.gamedstart'), 0.3, {right:-200,autoAlpha:0,delay:0.8,ease:Quad.easeOut});
+  TweenMax.to($('.g4q1'), 0.3, {left:0,autoAlpha:1,delay:1,ease:Quad.easeOut});
+  TweenMax.to($('#gamedq1'), 0.3, {right:0,autoAlpha:1,delay:1,ease:Quad.easeOut});
+}
+
+function gamedq1ok(){
+  TweenMax.to($('.g4q1'), 0.3, {left:0,autoAlpha:0,ease:Quad.easeOut});
+  TweenMax.to($('.g4q1-1'), 0.3, {left:0,autoAlpha:1,delay:0.3,ease:Quad.easeOut});
+  TweenMax.to($('.g4q1-1'), 0.3, {left:-200,autoAlpha:0,delay:2,ease:Quad.easeOut});
+  TweenMax.to($('#gamedq1'), 0.3, {right:-200,autoAlpha:0,delay:2,ease:Quad.easeOut});
+  TweenMax.to($('#gamedq2'), 0.3, {right:0,autoAlpha:1,delay:3,ease:Quad.easeOut});
+  TweenMax.to($('.g4q2'), 0.3, {left:0,autoAlpha:1,delay:3,ease:Quad.easeOut});
+}
+
+function gamedq2ok(){
+  TweenMax.to($('.g4q2'), 0.3, {left:0,autoAlpha:0,ease:Quad.easeOut});
+  TweenMax.to($('.g4q2-1'), 0.3, {left:0,autoAlpha:1,delay:0.3,ease:Quad.easeOut});
+  TweenMax.to($('.g4q2-1'), 0.3, {left:-200,autoAlpha:0,delay:2,ease:Quad.easeOut});
+  TweenMax.to($('#gamedq2'), 0.3, {right:-200,autoAlpha:0,delay:2,ease:Quad.easeOut});
+  TweenMax.to($('#gamedq3'), 0.3, {right:0,autoAlpha:1,delay:3,ease:Quad.easeOut});
+  TweenMax.to($('.g4q3'), 0.3, {left:0,autoAlpha:1,delay:3,ease:Quad.easeOut});
+}
+
+function gamedq3ok(){
+  TweenMax.to($('.g4q3'), 0.3, {left:0,autoAlpha:0,ease:Quad.easeOut});
+  TweenMax.to($('.g4q3-1'), 0.3, {left:0,autoAlpha:1,delay:0.3,ease:Quad.easeOut});
+  TweenMax.to($('.g4q3-1'), 0.3, {left:-200,autoAlpha:0,delay:2,ease:Quad.easeOut});
+  TweenMax.to($('#gamedq3'), 0.3, {right:-200,autoAlpha:0,delay:2,ease:Quad.easeOut});
+  TweenMax.to($('#gamedq4'), 0.3, {right:0,autoAlpha:1,delay:3,ease:Quad.easeOut});
+  TweenMax.to($('.g4q4'), 0.3, {left:0,autoAlpha:1,delay:3,ease:Quad.easeOut});
+}
+
+function gamedallright(){
+  TweenMax.to($('.g4q4'), 0.3, {left:0,autoAlpha:0,ease:Quad.easeOut});
+  TweenMax.to($('.g4q4-1'), 0.3, {left:0,autoAlpha:1,delay:0.3,ease:Quad.easeOut});
+  TweenMax.to($('#gamedq4'), 0.3, {right:-200,autoAlpha:0,delay:0.5,ease:Quad.easeOut});
+  $('.gamedallright').delay(1000).fadeIn();
+}
+
 
 function gamedwrong(){
   TweenMax.to($('.gameD .wrong'), 0.6, {marginTop:0,autoAlpha:1,ease:Quad.easeOut});
@@ -227,87 +275,6 @@ function gamedwrong(){
 }
 
 
-
-function gamedq2(){
-  TweenMax.to($('.gameD .t1'), 0.6, {autoAlpha:0,marginTop:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q1'), 0.6, {autoAlpha:0,marginLeft:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .t2'), 0.6, {autoAlpha:1,marginTop:0,delay:1.5,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q2'), 0.6, {autoAlpha:1,marginLeft:0,delay:1,ease:Quad.easeOut});
-   dnum=2;
-  console.log(dnum);
-
-}
-function gamedq3(){
-  TweenMax.to($('.gameD .t2'), 0.6, {autoAlpha:0,marginTop:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q2'), 0.6, {autoAlpha:0,marginLeft:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .t3'), 0.6, {autoAlpha:1,marginTop:0,delay:1.5,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q3'), 0.6, {autoAlpha:1,marginLeft:0,delay:1,ease:Quad.easeOut});
-  dnum=3;
-  console.log(dnum);
-
-}
-function gamedq4(){
-  TweenMax.to($('.gameD .t3'), 0.6, {autoAlpha:0,marginTop:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q3'), 0.6, {autoAlpha:0,marginLeft:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .t4'), 0.6, {autoAlpha:1,marginTop:0,delay:1.5,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q4'), 0.6, {autoAlpha:1,marginLeft:0,delay:1,ease:Quad.easeOut});
-  dnum=4;
-  console.log(dnum);
-
-}
-function gamedq5(){
-  TweenMax.to($('.gameD .t4'), 0.6, {autoAlpha:0,marginTop:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q4'), 0.6, {autoAlpha:0,marginLeft:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .t5'), 0.6, {autoAlpha:1,marginTop:0,delay:1.5,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q5'), 0.6, {autoAlpha:1,marginLeft:0,delay:1,ease:Quad.easeOut});
-  dnum=5;
-  console.log(dnum);
-
-}
-function gamedq6(){
-  TweenMax.to($('.gameD .t5'), 0.6, {autoAlpha:0,marginTop:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q5'), 0.6, {autoAlpha:0,marginLeft:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .t6'), 0.6, {autoAlpha:1,marginTop:0,delay:1.5,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q6'), 0.6, {autoAlpha:1,marginLeft:0,delay:1,ease:Quad.easeOut});
-  dnum=6;
-  console.log(dnum);
-
-}
-function gamedq7(){
-  TweenMax.to($('.gameD .t6'), 0.6, {autoAlpha:0,marginTop:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q6'), 0.6, {autoAlpha:0,marginLeft:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .t7'), 0.6, {autoAlpha:1,marginTop:0,delay:1.5,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q7'), 0.6, {autoAlpha:1,marginLeft:0,delay:1,ease:Quad.easeOut});
-  dnum=7;
-  console.log(dnum);
-
-}
-
-function gamedq8(){
-  TweenMax.to($('.gameD .t7'), 0.6, {autoAlpha:0,marginTop:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q7'), 0.6, {autoAlpha:0,marginLeft:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .t8'), 0.6, {autoAlpha:1,marginTop:0,delay:1.5,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q8'), 0.6, {autoAlpha:1,marginLeft:0,delay:1,ease:Quad.easeOut});
-  dnum=8;
-  console.log(dnum);
-
-}
-
-function gamedq9(){
-  TweenMax.to($('.gameD .t8'), 0.6, {autoAlpha:0,marginTop:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q8'), 0.6, {autoAlpha:0,marginLeft:-30,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .t9'), 0.6, {autoAlpha:1,marginTop:0,delay:1.5,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .q9'), 0.6, {autoAlpha:1,marginLeft:0,delay:1,ease:Quad.easeOut});
-  dnum=9;
-  console.log(dnum);
-
-}
-
-function gamedallright(){
-  TweenMax.to($('.gameD .wrong'), 0.6, {marginTop:50,autoAlpha:0,ease:Quad.easeOut});
-  TweenMax.to($('.gameD .allright'), 0.6, {autoAlpha:1,marginTop:0,ease:Quad.easeOut});
-
-}
 
 
 
