@@ -160,7 +160,19 @@ function gameBanimate(){
 }
 
 function gamebstart(){
-  TweenMax.to($('.gameB-start'), 0.3, {top:-380,alpha:0,ease:Sine.easeOut});
+   TweenMax.to($('.gameB-start'), 0.3, {top:-380,alpha:0,ease:Sine.easeOut});
+   TweenMax.to($('.gameB-girl'), 0.3, {right:-80,alpha:0,ease:Sine.easeOut});
+   TweenMax.to($('.note'), 0.3, {top:50,alpha:1,delay:0.3,ease:Sine.easeOut});
+   TweenMax.to($('.chart1'), 0.3, {left:200,alpha:1,delay:0.3,ease:Sine.easeOut});
+   TweenMax.to($('.chart1'), 0.3, {left:200,alpha:0,delay:3,ease:Sine.easeOut});
+   TweenMax.to($('.chart2'), 0.3, {left:80,alpha:1,delay:3.5,ease:Sine.easeOut});
+   TweenMax.to($('.okgo'), 0.3, {top:630,alpha:1,delay:5,ease:Sine.easeOut});
+}
+
+function gamebokgo(){
+  TweenMax.to($('.note'), 0.3, {top:-300,alpha:0,ease:Sine.easeOut});
+  TweenMax.to($('.chart2'), 0.3, {left:-200,alpha:0,ease:Sine.easeOut});
+  TweenMax.to($('.okgo'), 0.3, {top:600,alpha:0,ease:Sine.easeOut});
   TweenMax.to($('.gameB-girl'), 0.3, {right:80,alpha:1,ease:Sine.easeOut});
   TweenMax.to($('.shopping'), 0.6, {right:500,alpha:1,delay:0.3,ease:Sine.easeOut,onComplete:gamebqa});
   TweenMax.to($('.chart'), 0.6, {left:150,alpha:1,delay:0.6,ease:Sine.easeOut,onComplete:gamebqa});
